@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#0b0b0f" />
-  <meta name="description" content="RynnWorld-4D Website" />
-  <title>RynnWorld-4D</title>
-  <link rel="icon" href="assets/head.png" type="image/png" />
+  <meta name="description" content="RynnVLA-Latent: Latent Action Pretraining for Robotic Manipulation Foundation Models" />
+  <title>RynnVLA-Latent</title>
+  <link rel="icon" href="assets/damo-logo-1.png" type="image/png" />
   <!-- 图标库（按钮图标用） -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
@@ -964,6 +964,18 @@ html[data-theme="light"]{
       .car-btn.left{ left: -6px; }
       .car-btn.right{ right: -6px; }
     }
+  
+    :root{--accent:#4f46e5}
+    html[data-theme="dark"]{--accent:#a78bfa}
+    .rt{width:100%;border-collapse:collapse;font-size:13.5px;margin:10px 0}
+    .rt td,.rt th{border:1px solid var(--border);padding:6px 9px;text-align:center}
+    .rt th{background:var(--panel)}
+    .rt .best{font-weight:800;color:var(--accent)}
+    .tblwrap{padding:6px 18px 18px;overflow-x:auto}
+    .video-grid.three{grid-template-columns:repeat(3,1fr)}
+    .video-grid.one{grid-template-columns:1fr}
+    @media(max-width:980px){.video-grid.three{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:768px){.video-grid.three,.video-grid.one{grid-template-columns:1fr}}
   </style>
 </head>
 
@@ -980,11 +992,11 @@ html[data-theme="light"]{
   <!-- 左上角：学校+公司logo -->
   <div class="corner-logos" aria-label="Affiliation logos">
 
-    <img class="logo-light" src="assets/damo-logo-1.png" alt="School Logo Light">
+    <img class="logo-light" src="assets/damo-logo-1.png" alt="DAMO Academy">
     
-    <img class="logo-dark" src="assets/damo-logo-2.png" alt="School Logo Dark">
-    <img src="assets/logo-school.png" alt="Company Logo">
-    <img src="assets/logo-lab.jpg" alt="Company Logo">
+    <img class="logo-dark" src="assets/damo-logo-2.png" alt="DAMO Academy (dark)">
+    <img src="assets/logo-school.png" alt="CUHK">
+    <img src="assets/logo-lab.jpg" alt="Hong Kong Embodied AI Lab">
   </div>
 
   <!-- 右上角：主题切换（默认随系统） -->
@@ -1002,38 +1014,35 @@ html[data-theme="light"]{
       <div class="title-row">
         <!-- 项目logo（在标题左边） -->
         <!-- <img class="project-logo" src="assets/logo.png" alt="Project Logo"> -->
-        <h1 class="title">RynnWorld-4D</h1>
-        <h2 class="title">4D Embodied World Models for Robotic Manipulation</h2>
+        <h1 class="title">RynnVLA-Latent</h1>
+        <h2 class="title">Latent Action Pretraining for Robotic Manipulation Foundation Models</h2>
       </div>
 
-      <div class="authors">
+            <div class="authors">
         <span class="a"><a href="https://maxwell-zhao.github.io/" target="_blank" rel="noopener">Haoyu Zhao<sup>*</sup></a></span>
         <span class="a">Xingyue Zhao<sup>*</sup></span>
-        <span class="a">Siteng Huang<sup>‡</sup></span>
-        <span class="a">Xin Li<sup></sup></span>
-        <span class="a">Deli Zhao<sup>‡</sup></span>
-        <span class="a">Zhongyu Li<sup>‡</sup></span>
-
-        
+        <span class="a">Zhian Su<sup>*</sup></span>
+        <span class="a">Bohan Hou<sup>*</sup></span>
+        <span class="a">Yinzhou Tang<sup>*</sup></span>
+        <span class="a">Fengyi Wang</span>
+        <span class="a">Kehan Li</span>
+        <span class="a">Yuming Jiang</span>
+        <span class="a">Siteng Huang<sup>&dagger;</sup></span>
+        <span class="a">Xin Li</span>
+        <span class="a">Zhongyu Li<sup>&dagger;</sup></span>
       </div>
       
-      <div class="aff" style="font-size: 15px; margin-top: 10px; color: var(--muted);">
-        <span style="display:inline-block; margin: 0 10px;">
-          <sup>*</sup> Core contributors
-        </span>
-        <span style="display:inline-block; margin: 0 10px;">
-          <sup>‡</sup> Correspondence
-        </span>
+            <div class="aff" style="font-size: 15px; margin-top: 10px; color: var(--muted);">
+        DAMO Academy, Alibaba Group &middot; Hong Kong Embodied AI Lab &middot; CUHK &middot; Hupan Lab &middot; Alibaba Group<br/>
+        <span style="display:inline-block; margin: 0 10px;"><sup>*</sup> Core contributors</span>
+        <span style="display:inline-block; margin: 0 10px;"><sup>&dagger;</sup> Corresponding authors</span>
       </div>
 
       <!-- 图标按钮 -->
-      <div class="pill-row">
-        <a class="pill" href="https://github.com/alibaba-damo-academy/RynnWorld-4D" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
-        <a class="pill" href="https://arxiv.org/pdf/2607.06559" target="_blank" rel="noopener"><i class="fa-regular fa-file-lines"></i> Paper </a>
-        <!-- <a class="pill" href="#" target="_blank" rel="noopener"><i class="fa-solid fa-book-open"></i> ArXiv(Soon)</a> -->
-        <a class="pill" href="https://huggingface.co/Alibaba-DAMO-Academy/RynnWorld-4D" target="_blank" rel="noopener"><i class="fa-solid fa-face-smile"></i> Huggingface</a>
-        <a class="pill" href="https://www.modelscope.cn/models/DAMO_Academy/RynnWorld-4D" target="_blank" rel="noopener"><i class="fa-regular fa-file-lines"></i>modelscope</a>
-        <a class="pill" href="https://www.youtube.com/watch?v=mKw_r_fsrRg&feature=youtu.be" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i> YouTube</a>
+            <div class="pill-row">
+        <a class="pill" href="https://github.com/alibaba-damo-academy/RynnVLA-Latent" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a class="pill" href="https://huggingface.co/Alibaba-DAMO-Academy/RynnVLA-Latent" target="_blank" rel="noopener"><i class="fa-solid fa-face-smile"></i> Hugging Face</a>
+        <a class="pill" href="https://www.modelscope.cn/models/DAMO_Academy/RynnVLA-Latent" target="_blank" rel="noopener"><i class="fa-solid fa-cube"></i> ModelScope</a>
       </div>
 
       <!-- 宣传视频  -->
@@ -1048,13 +1057,9 @@ html[data-theme="light"]{
 
         <div class="promo-wrap"> 
           <div class="promo-inner">
-            <video 
-              id="mainVideo" 
-              src="assets/RynnWorld-4D.mp4" 
-              poster="assets/RynnWorld-4D-poster.jpg" 
-              controls 
-              playsinline>
-            </video>
+                        <div style="aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:700">
+              Teaser video coming soon
+            </div>
           </div>
         </div>
 
@@ -1067,28 +1072,15 @@ html[data-theme="light"]{
     <!-- Abstract -->
     <section>
       <h2 class="h2">Abstract</h2>
-      <div class="panel abstract">
+            <div class="panel abstract">
     <p>
-      We present <strong>RynnWorld-4D</strong>, a novel 4D embodied world model that shifts the paradigm from 2D pixel prediction to physically grounded 4D scene evolution. By co-generating synchronized RGB, depth, and optical flow (RGB-DF), RynnWorld-4D captures the underlying 3D geometry and temporal motion trajectories, creating a representation space that effectively bridges the gap between generative world modeling and low-level robotic control. We release RynnWorld-4D as a unified diffusion framework featuring a specialized tri-branch architecture, alongside RynnWorld-4D‑Policy (an inverse dynamics head for high-frequency, closed-loop bimanual manipulation).
+      Vision-language-action (VLA) models are limited by the scarcity and fragmentation of action-annotated robot data: different embodiments define incompatible action spaces, while abundant human videos remain unusable because they lack action labels. We present a unified latent-action framework that turns heterogeneous manipulation video into a shared, embodiment-agnostic action space. We first train <strong>RynnLAM</strong>, a latent action model, fully self-supervised to compress inter-frame dynamics into compact latent actions grounded in physical motion. Using RynnLAM as a scalable auto-labeler we densely annotate a large multi-source corpus, then pretrain <strong>RynnVLA-Latent</strong>, a Mixture-of-Transformers VLA that generates latent-action chunks from language and multi-view observations via flow matching; post-training retargets the same objective to robot-specific action spaces, requiring action-labeled demonstrations only for final embodiment alignment.
     </p>
-
-    <h3 style="text-align: left; margin: 24px 0 12px; font-size: 20px; display: flex; align-items: center; gap: 8px;">
-      🌟 Key Highlights
-    </h3>
-    
+    <h3 style="text-align: left; margin: 24px 0 12px; font-size: 20px; display: flex; align-items: center; gap: 8px;">Key Highlights</h3>
     <ul style="text-align: left; padding-left: 20px; line-height: 1.6;">
-      <li style="margin-bottom: 10px;">
-        <strong>Projective 4D Representation:</strong><br>
-        Integrates RGB, Depth, and Optical Flow into a unified RGB-DF format, allowing pixels to be unprojected into metric 3D scene flow for precise geometric and kinetic grounding.
-      </li>
-      <li style="margin-bottom: 10px;">
-        <strong>Tri-branch Diffusion Architecture:</strong><br>
-        Employs three dedicated transformer branches with mutual cross-modal attention, ensuring that appearance, geometry, and motion evolve with high spatio-temporal consistency.
-      </li>
-      <li style="margin-bottom: 10px;">
-        <strong>Action-from-Latent Policy:</strong><br>
-        RynnWorld-4D-Policy bypasses expensive multi-step denoising by directly consuming internal 4D latents, enabling high-frequency (9Hz+), closed-loop dexterous control.
-      </li>
+      <li style="margin-bottom: 10px;"><strong>Metric, 3D, camera-invariant latent actions:</strong><br>RynnLAM grounds latents in future visual features, dynamic 3D flow and explicit camera-ego-motion decoupling.</li>
+      <li style="margin-bottom: 10px;"><strong>Label once, align everything:</strong><br>One shared latent-action space absorbs robot, simulation and human egocentric video under a single supervision signal.</li>
+      <li style="margin-bottom: 10px;"><strong>Pretrain then retarget:</strong><br>Flow-matching pretraining on latent actions, then post-training retargets the same objective to the target robot's action space with no extra decoder.</li>
     </ul>
   </div>
     </section>
@@ -1097,8 +1089,18 @@ html[data-theme="light"]{
     <section>
       <h2 class="h2">Overview</h2>
       <!-- <p class="desc">放一张 Overview 大图（assets/overview.png）</p>  -->
+      <div class="panel soft">
+        <div style="padding:34px 30px;color:var(--muted);font-weight:650;line-height:1.9;text-align:left"><strong style="color:var(--text)">1 &middot; RynnLAM.</strong> Self-supervised latent actions: motion tokens + global action latent + camera latent, grounded by future-feature prediction, dynamic 3D flow and camera-pose decoupling.<br/><strong style="color:var(--text)">2 &middot; Auto-labeling.</strong> RynnLAM annotates a 25-dataset multi-embodiment corpus into one shared latent-action space.<br/><strong style="color:var(--text)">3 &middot; Pretraining.</strong> A Mixture-of-Transformers policy (RynnBrain VLM + narrow action expert) generates latent-action chunks via flow matching.<br/><strong style="color:var(--text)">4 &middot; Post-training.</strong> The same flow-matching objective is retargeted to the target robot&rsquo;s action space; no separate decoder is added.</div>
+      </div>
+    </section>
+
+
+    <!-- Training Data -->
+    <section>
+      <h2 class="h2">Training Data</h2>
+      <p class="desc">Pre-training corpus of RynnVLA-Latent. Human egocentric video, real-robot manipulation and simulation rollouts are all relabelled by RynnLAM into one shared latent-action space, so heterogeneous sources contribute to a single policy objective. Click the figure to enlarge.</p>
       <div class="frame">
-        <img src="assets/pipeline.png" alt="Overview" />
+        <img src="assets/datasets.png" alt="RynnVLA pretraining corpus" onclick="openLightbox(this)" style="cursor:zoom-in" />
       </div>
     </section>
 
@@ -1107,117 +1109,72 @@ html[data-theme="light"]{
       <img id="lightbox-img" src="" alt="Fullscreen">
     </div>
     <section>
-      <h2 class="h2">RynnWorld-4D</h2>
-
-      <div class="panel soft" style="padding: 12px 14px 18px;">
-        <div class="video-grid">
-          <div class="video-grid-card">
-            <div class="frame"><video class="video" src="assets/flowworld/1/merged.mp4" controls playsinline preload="metadata"></video></div>
-          </div>
-
-          <div class="video-grid-card">
-            <div class="frame"><video class="video" src="assets/flowworld/2/merged.mp4" controls playsinline preload="metadata"></video></div>
-          </div>
-
-          <div class="video-grid-card">
-            <div class="frame"><video class="video" src="assets/flowworld/3/merged.mp4" controls playsinline preload="metadata"></video></div>
-          </div>
-
-          <!-- <div class="video-grid-card">
-            <div class="frame"><video class="video" src="assets/flowworld/4/merged.mp4" controls playsinline preload="metadata"></video></div>
-          </div> -->
-
-          <div class="video-grid-card">
-            <div class="frame"><video class="video" src="assets/flowworld/6/merged.mp4" controls playsinline preload="metadata"></video></div>
-          </div>
-
-          <div class="video-grid-card">
-            <div class="frame"><video class="video" src="assets/flowworld/7/merged.mp4" controls playsinline preload="metadata"></video></div>
-          </div>
-
-          <div class="video-grid-card">
-            <div class="frame"><video class="video" src="assets/flowworld/8/merged.mp4" controls playsinline preload="metadata"></video></div>
-          </div>
-
-          <div class="video-grid-card">
-            <div class="frame"><video class="video" src="assets/flowworld/9/merged.mp4" controls playsinline preload="metadata"></video></div>
-          </div>
-
-          <div class="video-grid-card">
-            <div class="frame"><video class="video" src="assets/flowworld/10/merged.mp4" controls playsinline preload="metadata"></video></div>
-          </div>
-
-          <div class="video-grid-card">
-            <div class="frame"><video class="video" src="assets/flowworld/11/merged.mp4" controls playsinline preload="metadata"></video></div>
-          </div>
-
-          <!-- <div class="video-grid-card">
-            <div class="frame"><video class="video" src="assets/flowworld/12/merged.mp4" controls playsinline preload="metadata"></video></div>
-          </div> -->
-
-          <div class="video-grid-card">
-            <div class="frame"><video class="video" src="assets/flowworld/13/merged.mp4" controls playsinline preload="metadata"></video></div>
-          </div>
+      <h2 class="h2">Results</h2>
+      <p class="desc">All benchmarks; RynnVLA-Latent rows are placeholders (&ndash;&ndash;) to be filled after evaluation completes.</p>
+      <div class="panel soft">
+        <div class="tblwrap">
+          <div class="h3-row">LIBERO</div>
+          <table class="rt"><tr><th>Method</th><th>Spatial</th><th>Object</th><th>Goal</th><th>Long</th><th>Avg</th></tr>
+            <tr><td>OpenVLA-OFT</td><td>97.6</td><td>98.4</td><td>97.9</td><td>94.5</td><td>97.1</td></tr>
+            <tr><td>&pi;<sub>0</sub></td><td>98.0</td><td>96.8</td><td>94.4</td><td>88.4</td><td>94.4</td></tr>
+            <tr><td>&pi;<sub>0.5</sub></td><td>98.8</td><td>98.2</td><td>98.0</td><td>92.4</td><td>96.9</td></tr>
+            <tr><td>Motus</td><td>96.8</td><td>99.8</td><td>96.6</td><td>97.6</td><td>97.7</td></tr>
+            <tr><td>Xiaomi-Robotics-0</td><td>98.8</td><td>100.0</td><td>98.8</td><td>97.2</td><td>98.7</td></tr>
+            <tr><td>InternVLA-A1.5</td><td>98.6</td><td>99.8</td><td>98.6</td><td>98.4</td><td>98.9</td></tr>
+            <tr><td><b>RynnVLA-Latent-2B</b></td><td>--</td><td>--</td><td>--</td><td>--</td><td>--</td></tr>
+            <tr><td><b>RynnVLA-Latent-4B</b></td><td>--</td><td>--</td><td>--</td><td>--</td><td>--</td></tr>
+          </table>
+          <div class="h3-row">LIBERO-Plus (zero-shot, LIBERO-finetuned checkpoint)</div>
+          <table class="rt"><tr><th>Method</th><th>Cam</th><th>Robot</th><th>Lang</th><th>Light</th><th>Bkg</th><th>Noise</th><th>Layout</th><th>Total</th></tr>
+            <tr><td>OpenVLA-OFT</td><td>56.4</td><td>31.9</td><td>79.5</td><td>88.7</td><td>93.3</td><td>75.8</td><td>74.2</td><td>69.6</td></tr>
+            <tr><td>&pi;<sub>0.5</sub></td><td>78.4</td><td>73.6</td><td>80.8</td><td>96.2</td><td>94.1</td><td>89.0</td><td>84.5</td><td>84.4</td></tr>
+            <tr><td>Cosmos Policy</td><td>75.8</td><td>63.3</td><td>81.7</td><td>96.5</td><td>88.9</td><td>92.7</td><td>82.2</td><td>82.2</td></tr>
+            <tr><td>InternVLA-A1.5</td><td>83.1</td><td>55.1</td><td>86.9</td><td>96.4</td><td>98.2</td><td>95.6</td><td>85.2</td><td>84.8</td></tr>
+            <tr><td><b>RynnVLA-Latent-2B</b></td><td>--</td><td>--</td><td>--</td><td>--</td><td>--</td><td>--</td><td>--</td><td>--</td></tr>
+            <tr><td><b>RynnVLA-Latent-4B</b></td><td>--</td><td>--</td><td>--</td><td>--</td><td>--</td><td>--</td><td>--</td><td>--</td></tr>
+          </table>
+          <div class="h3-row">RoboTwin 2.0</div>
+          <table class="rt"><tr><th>Method</th><th>Clean</th><th>Randomized</th><th>Avg</th></tr>
+            <tr><td>&pi;<sub>0</sub></td><td>65.9</td><td>58.4</td><td>62.2</td></tr>
+            <tr><td>&pi;<sub>0.5</sub></td><td>82.7</td><td>76.8</td><td>79.8</td></tr>
+            <tr><td>LingBot-VLA</td><td>88.6</td><td>86.7</td><td>87.7</td></tr>
+            <tr><td>InternVLA-A1</td><td>89.4</td><td>89.6</td><td>89.5</td></tr>
+            <tr><td>Being-H0.7</td><td>90.2</td><td>89.6</td><td>89.9</td></tr>
+            <tr><td><b>RynnVLA-Latent-2B</b></td><td>--</td><td>--</td><td>--</td></tr>
+            <tr><td><b>RynnVLA-Latent-4B</b></td><td>--</td><td>--</td><td>--</td></tr>
+          </table>
+          <div class="h3-row">RoboTwin 2.0 &mdash; Clean2Random protocol</div>
+          <table class="rt"><tr><th>Method</th><th>Clean2Clean (easy)</th><th>Clean2Random (hard)</th></tr>
+            <tr><td>&pi;<sub>0</sub></td><td>46.4</td><td>16.3</td></tr>
+            <tr><td>X-WAM</td><td>70.0</td><td>25.8</td></tr>
+            <tr><td>&pi;<sub>0.5</sub></td><td>70.7</td><td>46.0</td></tr>
+            <tr><td><b>RynnVLA-Latent-2B</b></td><td>--</td><td>--</td></tr>
+            <tr><td><b>RynnVLA-Latent-4B</b></td><td>--</td><td>--</td></tr>
+          </table>
+          <div class="h3-row">VLABench</div>
+          <table class="rt"><tr><th>Method</th><th colspan="3">In-Dist (SR/PS/IS)</th><th colspan="3">Cross-Cat</th><th colspan="3">Common Sense</th><th colspan="3">Average</th></tr>
+            <tr><td>&pi;<sub>0</sub></td><td>47.0</td><td>62.7</td><td>67.8</td><td>21.2</td><td>33.6</td><td>44.0</td><td>29.1</td><td>43.0</td><td>54.9</td><td>29.4</td><td>44.1</td><td>55.0</td></tr>
+            <tr><td>&pi;<sub>0</sub>-FAST</td><td>56.2</td><td>66.8</td><td>72.4</td><td>31.0</td><td>38.2</td><td>47.8</td><td>38.0</td><td>48.6</td><td>56.8</td><td>39.8</td><td>49.5</td><td>58.6</td></tr>
+            <tr><td>&pi;<sub>0.5</sub></td><td>65.4</td><td>77.8</td><td>80.4</td><td>38.2</td><td>49.7</td><td>52.0</td><td>43.9</td><td class="best">57.3</td><td class="best">60.0</td><td>48.1</td><td class="best">62.3</td><td>64.9</td></tr>
+            <tr><td><b>RynnVLA-Latent-2B</b></td><td>58.5</td><td>71.2</td><td>81.2</td><td>30.3</td><td>40.1</td><td>53.3</td><td>26.2</td><td>39.9</td><td>59.8</td><td>37.2</td><td>50.6</td><td>68.4</td></tr>
+            <tr><td><b>RynnVLA-Latent-4B</b></td><td class="best">67.8</td><td class="best">80.3</td><td class="best">83.9</td><td class="best">48.0</td><td class="best">60.7</td><td class="best">68.2</td><td class="best">44.6</td><td>53.8</td><td>54.1</td><td class="best">53.2</td><td class="best">64.3</td><td class="best">71.6</td></tr>
+          </table>
+          <div class="h3-row">Real-world manipulation (Marvin-WUJI &amp; Astribot-S1)</div>
+          <table class="rt"><tr><th>Model</th><th>Plate Placement</th><th>Steak Cooking</th><th>Plate Wiping</th><th>Table Cleaning</th><th>Steak Serving</th><th>Plate Retrieval</th></tr>
+            <tr><td>&pi;<sub>0</sub></td><td>80.00</td><td>34.29</td><td>71.43</td><td>22.86</td><td>37.14</td><td>45.71</td></tr>
+            <tr><td>&pi;<sub>0.5</sub></td><td>82.86</td><td>28.57</td><td>77.14</td><td>25.71</td><td>40.00</td><td>45.71</td></tr>
+            <tr><td>GR00T-N1.7</td><td>74.29</td><td>28.57</td><td>74.29</td><td>17.14</td><td>45.71</td><td>37.14</td></tr>
+            <tr><td><b>RynnVLA-Latent-2B</b></td><td>80.00</td><td>34.29</td><td>68.57</td><td>34.29</td><td>42.86</td><td>48.57</td></tr>
+            <tr><td><b>RynnVLA-Latent-4B</b></td><td class="best">85.71</td><td class="best">42.86</td><td class="best">82.86</td><td class="best">40.00</td><td class="best">57.14</td><td class="best">54.29</td></tr>
+          </table>
         </div>
       </div>
     </section>
     <!-- Demos：三卡滑动（按钮翻页），支持很多个 -->
     <section>
-      <h2 class="h2">Real-world experiments</h2>
-       <p class="desc">Click on the video to view a larger version.</p> 
-
+      <h2 class="h2">Real-Robot Demos</h2>
       <div class="panel soft" style="padding: 12px 14px 18px;">
-        <div class="video-grid">
-          <div class="video-grid-card">
-            <div class="frame"><video class="video" src="assets/real/1.mp4" controls playsinline></video></div>
-            <div class="demo-title">Dual Picking</div>
-          </div>
-
-          <div class="video-grid-card">
-            <div class="frame"><video class="video" src="assets/real/2.mp4" controls playsinline></video></div>
-            <div class="demo-title">Dual Picking</div>
-          </div>
-
-          <div class="video-grid-card">
-            <div class="frame"><video class="video" src="assets/real/3.mp4" controls playsinline></video></div>
-            <div class="demo-title">Block Pushing</div>
-          </div>
-
-          <div class="video-grid-card">
-            <div class="frame"><video class="video" src="assets/real/5.mp4" controls playsinline></video></div>
-            <div class="demo-title">Hand-over</div>
-          </div>
-
-          <div class="video-grid-card">
-            <div class="frame"><video class="video" src="assets/real/6.mp4" controls playsinline></video></div>
-            <div class="demo-title">Bimanual Lifting</div>
-          </div>
-
-          <div class="video-grid-card">
-            <div class="frame"><video class="video" src="assets/real/7.mp4" controls playsinline></video></div>
-            <div class="demo-title">Bimanual Lifting</div>
-          </div>
-
-          <div class="video-grid-card">
-            <div class="frame"><video class="video" src="assets/real/8.mp4" controls playsinline></video></div>
-            <div class="demo-title">Lid Placement</div>
-          </div>
-
-          <div class="video-grid-card">
-            <div class="frame"><video class="video" src="assets/real/9.mp4" controls playsinline></video></div>
-            <div class="demo-title">Lid Placement</div>
-          </div>
-
-          <div class="video-grid-card">
-            <div class="frame"><video class="video" src="assets/real/10.mp4" controls playsinline></video></div>
-            <div class="demo-title">Bowl Stacking</div>
-          </div>
-
-          <div class="video-grid-card">
-            <div class="frame"><video class="video" src="assets/real/11.mp4" controls playsinline></video></div>
-            <div class="demo-title">Bowl Stacking</div>
-          </div>
-        </div>
+        <div class="frame"><div style="aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:700">Closed-loop rollout videos on Marvin-WUJI and Astribot-S1 coming soon</div></div>
       </div>
     </section>
 
@@ -1234,23 +1191,23 @@ html[data-theme="light"]{
         </div>
 
 
-       <pre id="bibtexBlock"><code>@article{RynnWorld-4D2026,
-  title   = {RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation},
-  author  = {Haoyu Zhao and Xingyue Zhao and Siteng Huang and Xin Li and Deli Zhao and Zhongyu Li},
+              <pre id="bibtexBlock"><code>@article{rynnvla2026latent,
+  title   = {RynnVLA-Latent: Latent Action Pretraining for Robotic Manipulation Foundation Models},
+  author  = {Haoyu Zhao and Xingyue Zhao and Zhian Su and Bohan Hou and Yinzhou Tang and Fengyi Wang and Kehan Li and Yuming Jiang and Siteng Huang and Xin Li and Zhongyu Li},
   year    = {2026}
 }</code></pre>
       </div>
     </section>
 
-    <div class="footer">
-      © <span id="year"></span> RynnWorld-4D Team, DAMO Academy, Alibaba Group
+        <div class="footer">
+      &copy; <span id="year"></span> RynnVLA-Latent Team, DAMO Academy, Alibaba Group
     </div>
   </main>
 
   <script>
     /* 视频切换逻辑 */
-    const srcZh = "https://github.com/alibaba-damo-academy/RynnWorld-4D.github.io/raw/refs/heads/main/assets/poster_video_zh.mp4";     // 中文版路径
-    const srcEn = "https://github.com/alibaba-damo-academy/RynnWorld-4D.github.io/raw/refs/heads/main/assets/poster_video_en.mp4";  // 英文版路径
+    const srcZh = "";     // 中文版路径
+    const srcEn = "";  // 英文版路径
 
     function switchVideo(lang) {
       const vid = document.getElementById('mainVideo');
@@ -1461,7 +1418,7 @@ html[data-theme="light"]{
     // Real-world experiments 已改为静态两列网格，无需 initCarousel
 
     // 启动第二个 (Navigation Demos - 双列)
-    // RynnWorld-4D 已改为静态两列网格，无需 initCarousel
+    // 已改为静态两列网格，无需 initCarousel
   </script>
 </body>
 </html>
